@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let container = document.createElement('div');
     container.className = 'header-container';
 
+    let colorArray = ["red", "orange", "gold", "green", "blue", "rebeccapurple", "pink", "black"]
+    let colorChange = '${colorArray[Math.floor(Math.random()*colorArray.length)]}';
+
+    function randomColor() {
+        document.getElementsByClassName('h6').style.color = colorChange;
+    };
+
     let h1 = document.createElement('h1');
     let headingText = document.createTextNode('This is an h1');
     h1.className = "h1";
@@ -55,13 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     h6.appendChild(h6Text);
     container.appendChild(h6);
 
-    // document.getElementsByClass('h6').addEventListener("dblclick", function () {})
-
-    let colorArray = ["red", "orange", "gold", "green", "blue", "rebeccapurple", "pink", "black"]
-    
-    let colorChange = colorArray[Math.floor(Math.random()*colorArray.length)];
-    
-    document.body.innerHTML = colorChange;
+    // document.getElementsByClassName('h6').addEventListener("dblclick", randomColor);
 
     // let header = $(':header')
 
